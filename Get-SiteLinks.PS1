@@ -1,0 +1,1 @@
+Get-ADReplicationSiteLink -Filter * -Properties * | select Name,CN,Cost,Created,Description,InterSiteTransportProtocol,Modified,ReplicationFrequencyInMinutes | Export-CSV SitesInfo.csv -NoTypeInformation

@@ -1,0 +1,1 @@
+PS D:\> Get-ADComputer -Filter {enabled -eq $true} -properties *|select Name, LastLogonDate, Enabled, Description| Where {[DateTime]::Now.AddDays(-365) -ge$_.LastLogonDate} | export-csv oldcomputer.csv -notypeinformation
